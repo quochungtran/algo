@@ -1,87 +1,67 @@
-class ArrayQueue
+#include <iostream>
+#include <queue>
+#include <stack>
+
+using namespace std;
+
+void reserveQueueFirstKElement(queue<int> *Q, int k)
 {
-private:
-    int front, rear;
-    int capacity;
-    int sizeQueue;
-    int *array;
-
-public:
-    ArrayQueue(int size);
-
-    ~ArrayQueue();
-
-    int isEmptyQueue();
-
-    int isFullQueue();
-
-    void reSize();
-
-    void enQueue(int data);
-
-    int deQueue();
-
-    void deleteQueue();
-};
-
-ArrayQueue::ArrayQueue(int size) : capacity(size), sizeQueue(0), front(-1), rear(-1)
-{
-    array = new int[capacity];
-}
-
-ArrayQueue::~ArrayQueue()
-{
-    deleteQueue();
-}
-
-int ArrayQueue::isEmptyQueue()
-{
-    return (sizeQueue == 0);
-}
-
-int ArrayQueue::isFullQueue()
-{
-    return sizeQueue == capacity;
-}
-
-void ArrayQueue::reSize()
-{
-}
-
-void ArrayQueue::enQueue(int data)
-{
-    if (isFullQueue())
-        throw "Queue overflow ";
-    else
+    if (Q->empty() || k > Q->size())
     {
-        rear = (rear + 1) % capacity;
-        array[rear] = data;
-        sizeQueue++;
+        return;
+    }
+    else if (k > 0)
+    {
+        stack<int> stk;
+        for (int i = 0; i < k; i++)
+        {
+            stk.push(Q->front());
+            Q->pop();
+        }
+        while (!stk.empty())
+        {
+            Q->push(stk.top());
+            stk.pop();
+        }
+        //wrap the rest of elements
+        for (int i = 0; i < Q->size() - k; i++)
+        {
+            Q->push(Q->front());
+            Q->pop();
+        }
     }
 }
 
-int ArrayQueue::deQueue()
+int main()
 {
-    int x;
+    queue<int> Q;
 
-    if (isEmptyQueue)
+    Q.push(10);
+    Q.push(20);
+    Q.push(30);
+    Q.push(40);
+    Q.push(50);
+    Q.push(60);
+    Q.push(70);
+    Q.push(80);
+    Q.push(90);
+    Q.push(100);
+
+    // afficher queue
+
+    std::cout << "-----------Reserve-----------" << endl;
+
+    reserveQueueFirstKElement(&Q, 4);
+    cout << "Queue size before printing the elements: "
+         << Q.size() << endl;
+    cout << "Queue element are..." << endl;
+    while (!Q.empty())
     {
-        throw "Empty queue deque";
-    }
-    else
-    {
-        x = array[front];
-        front = (front + 1) % capacity;
-        sizeQueue--;
+        cout << " " << Q.front();
+        Q.pop();
     }
 
-    return x;
-}
-
-void ArrayQueue::deleteQueue()
-{
-    sizeQueue = 0;
-    capacity = 0;
-    front = rear = -1;
-    delete[] array;
+    cout << endl;
+    cout << "Queue size after printing the elements: " << Q.size() << endl;
+    return 0;
 }
