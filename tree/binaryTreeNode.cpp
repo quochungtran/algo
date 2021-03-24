@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stack>
-
+#include <queue>
 struct BinaryTreeNode
 {
     int data;
@@ -121,6 +121,54 @@ void InOrderNonRecursive(BinaryTreeNode *root)
         }
 
     } while (!stack.empty());
+}
 
+int FindMaxUsingLevelOlder(BinaryTreeNode *root)
+{
+    int max = INT16_MIN;
+    BinaryTreeNode *temps;
+    std::queue<BinaryTreeNode *> Q;
 
+    Q.push(temps);
+
+    while (!Q.empty())
+    {
+        temps = Q.front();
+        Q.pop();
+
+        if (max <= temps->data)
+            max = temps->data;
+
+        if (temps->left)
+        {
+            Q.push(temps->left);
+        }
+
+        if (temps->right)
+        {
+            Q.push(temps->right);
+        }
+    }
+
+    return max;
+}
+
+int FindInBinaryTreeUsingRercusion(BinaryTreeNode *root, int item)
+{
+    int temp;
+    if (root == nullptr)
+        return 0;
+
+    if (root->data == item)
+        return 1;
+    else
+    {
+        temp = FindInBinaryTreeUsingRercusion(root->left, item);
+        if (temp != 0)
+            return temp;
+        else
+            return FindInBinaryTreeUsingRercusion(root->right, item);
+    }
+
+    return 0;
 }
