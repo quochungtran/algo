@@ -16,7 +16,7 @@ void PreOrder(BinaryTreeNode *root)
 {
     if (root)
     {
-        std::cout << root->data;
+        std::cout << root->data << " ";
         PreOrder(root->left);
         PreOrder(root->right);
     }
@@ -27,7 +27,7 @@ void InOrder(BinaryTreeNode *root)
     if (root)
     {
         PreOrder(root->left);
-        std::cout << root->data;
+        std::cout << root->data << " ";
         PreOrder(root->right);
     }
 }
@@ -38,7 +38,7 @@ void PostOrder(BinaryTreeNode *root)
     {
         PreOrder(root->left);
         PreOrder(root->right);
-        std::cout << root->data;
+        std::cout << root->data << " ";
     }
 }
 
@@ -123,6 +123,52 @@ void InOrderNonRecursive(BinaryTreeNode *root)
     } while (!stack.empty());
 }
 
+//insert in Binary Tree
+
+void InsertInBinaryTree(BinaryTreeNode **root, int data)
+{
+    std::queue<BinaryTreeNode *> Q;
+
+    BinaryTreeNode *newNode = new BinaryTreeNode();
+    newNode->left = newNode->right = nullptr;
+    newNode->data = data;
+
+    BinaryTreeNode *temp;
+
+    if (*root == nullptr)
+    {
+        *root = newNode;
+        return;
+    }
+
+    Q.push(*root);
+
+    if (!Q.empty())
+    {
+        temp = Q.front();
+
+        if (temp->left)
+        {
+            Q.push(newNode);
+        }
+        else
+        {
+            temp->left = newNode;
+            return;
+        }
+
+        if (temp->right)
+        {
+            Q.push(newNode);
+        }
+        else
+        {
+            temp->right = newNode;
+            return;
+        }
+    }
+}
+
 int FindMaxUsingLevelOlder(BinaryTreeNode *root)
 {
     int max = INT16_MIN;
@@ -169,6 +215,48 @@ int FindInBinaryTreeUsingRercusion(BinaryTreeNode *root, int item)
         else
             return FindInBinaryTreeUsingRercusion(root->right, item);
     }
+
+    return 0;
+}
+
+int SizeOfBinaryTree(BinaryTreeNode *root)
+{
+    if (root == nullptr)
+        return 0;
+    else
+        return (SizeOfBinaryTree(root->left) + 1 + SizeOfBinaryTree(root->right));
+}
+
+int heightOfBinaryTree(BinaryTreeNode *root)
+{
+    int leftHeight;
+    int rightHeight;
+
+    if (root == nullptr)
+    {
+        return 0;
+    }
+    else
+    {
+        leftHeight = heightOfBinaryTree(root->left);
+        rightHeight = heightOfBinaryTree(root->right);
+
+        if (leftHeight < rightHeight)
+            return leftHeight + 1;
+        else
+            return rightHeight + 1;
+    }
+}
+
+int main()
+{
+    BinaryTreeNode *tree = nullptr;
+    InsertInBinaryTree(&tree, 1);
+    InsertInBinaryTree(&tree, 2);
+    InsertInBinaryTree(&tree, 3);
+
+
+    InOrder(tree);
 
     return 0;
 }
