@@ -47,8 +47,10 @@
 |503| [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/) | Medium |
 |1047| [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | EASY |
 
-
-|  | **TREE** | | |
+**TREE**
+| # | Title | Difficulty |
+|---| ----- | -------- | 
+|  | **TREE** | | 
 | 700 | [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Easy | 
 | 559 | [Maximum Depth of N-ary Tree](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/) | Easy | 
 | 1022 | [Sum of Root To Leaf Binary Numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/) | Easy | 
