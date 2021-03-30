@@ -31,4 +31,6 @@
 *.out
 *.app
 
-*.cpp
+
+./linked_list/linked_list.out 
+
