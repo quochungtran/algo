@@ -2,42 +2,26 @@
 class Solution
 {
 public:
-    stack<TreeNode *> stack1;
-    stack<TreeNode *> stack2;
+   
 
     bool leafSimilar(TreeNode *root1, TreeNode *root2)
     {
+        stack<int > stack1;
+        stack<int > stack2;
         Preoder(root1, &stack1);
         Preoder(root2, &stack2);
-
-        if (stack1.size() == stack2.size())
-        {
-            while (!stack1.empty())
-            {
-                if (stack1.top()->val != stack2.top()->val)
-                {
-                    return false;
-                }
-                
-                std::cout << stack1.top()->val; 
-                stack1.pop();
-                stack2.pop();
-            }
-        }
-        else
-        {
-            return false;
-        }
-
-        return true;
+        
+        return stack1 == stack2;
     }
 
-    void Preoder(TreeNode *root, stack<TreeNode *> *stk)
+    void Preoder(TreeNode *root, stack<int > *stk)
     {
-        if (root)
+        if (root == nullptr)
+            return ;
+        if (root != nullptr)
         {
             if (root != nullptr && root->left == nullptr && root->right == nullptr)
-                stk->push(root);
+                stk->push(root->val);
 
             Preoder(root->left, stk);
             Preoder(root->right, stk);
