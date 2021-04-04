@@ -219,7 +219,7 @@ int FindInBinaryTreeUsingRercusion(BinaryTreeNode *root, int item)
     return 0;
 }
 
-int SizeOfBinaryTree(BinaryTreeNode *root)
+int SizeOfBinaryTree(BinaryTreeNode *root) // number of node
 {
     if (root == nullptr)
         return 0;
