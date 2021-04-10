@@ -56,7 +56,7 @@ void PreOrderNonRecursive(BinaryTreeNode *root)
             stack.push(root);
             root = root->left;
         }
-
+    
         if (stack.empty())
             break;
 
