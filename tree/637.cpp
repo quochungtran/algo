@@ -35,7 +35,7 @@ public:
             long int sum = 0;
             int count = 0;
             double mean = 0;
-            queue<TreeNode *> Q2; /* Q2 is created for stock nodes of each level*/
+            queue<TreeNode *> tempQueue; /* Q2 is created for stock nodes of each level*/
             TreeNode *temp;
             
             while (!Q.empty())
@@ -48,15 +48,15 @@ public:
 
                 if (temp->left)
                 {
-                    Q2.push(temp->left);
+                    tempQueue.push(temp->left);
                 }
                 if (temp->right)
                 {
-                    Q2.push(temp->right);
+                    tempQueue.push(temp->right);
                 }
             }
 
-            Q = Q2;
+            Q = tempQueue;
             mean = double(sum) / count;
             vec->push_back(mean);
         }
