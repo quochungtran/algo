@@ -1,35 +1,55 @@
-class Solution {
+class Solution
+{
 public:
-    vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c) {
-        vector<vector<int>> new_nums;
-        vector<int> array ; 
-        int index = 0;
-        int taille = nums[0].size() * nums.size();
-        
-         if (r*c != taille || nums.size() == 0)
-             return nums;
-        
-        for (vector<int> item : nums)
+    vector<vector<int>> threeSum(vector<int> &nums)
+    {
+
+        vector<vector<int>> resultat;
+
+        if (nums.size() == 0)
+            return resultat;
+
+        int sum;
+
+        sort(nums.begin(), nums.end());
+
+        for (int i = 0; i < nums.size(); i++)
         {
-            for (int i : item)
+            
+            // skip the previous case
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue;
+
+            int left = i + 1;
+            int right = nums.size() - 1;
+
+            while (left < right)
             {
-                array.push_back(i);
+                sum = nums[i] + nums[left] + nums[right];
+
+                if (sum == 0)
+                {
+                    vector<int> a;
+                    a.push_back(nums[i]);
+                    a.push_back(nums[left]);
+                    a.push_back(nums[right]);
+                    resultat.push_back(a);
+                    left += 1;
+
+                    // skip the same element
+                    while ((left < right) && (nums[left] == nums[left - 1]))
+                        left += 1;
+                }
+                else
+                {
+                    if (sum > 0)
+                        right -= 1;
+                    if (sum < 0)
+                        left += 1;
+                }
             }
         }
-        
-      
-        for (int i = 0; i < r; i++)
-        {
-            vector<int> temp ;
-            for (int j = 0 ; j < c ; j++)
-            {
-                temp.push_back(array[index]);
-                // std::cout << array[index] << " ";
-                index++; 
-            }
-            new_nums.push_back(temp);
-        }
-       
-        return  new_nums;
+
+        return resultat;
     }
 };
