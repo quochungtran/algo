@@ -21,7 +21,7 @@ public:
                 continue;
 
             int left = i + 1;
-            int right = nums.size() - 1;
+            int right = nums.s ize() - 1;
 
             while (left < right)
             {
