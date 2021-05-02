@@ -6,6 +6,7 @@ public:
         int pop;
         int temp;
 
+        // anwser for this function
         int rev = 0;
 
         while (x)
