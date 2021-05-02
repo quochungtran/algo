@@ -71,6 +71,53 @@
 | 863 | [All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/) | Medium | 
 | 1245 | [Tree Diameter](#1245)| Medium | 
 
+---
+**BINARY SEARCH TREE**
+| # | Title | Difficulty | 
+|:---:| ---------- |:--------:|
+|  | **BINARY SEARCH TREE** | | |
+| 653 | [Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/) | Easy |
+| 230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium |
+| 449 | [Serialize and Deserialize BST](https://leetcode.com/problems/serialize-and-deserialize-bst/) | Medium | 
+| 538 | [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/) | Easy |
+| 1038 | [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | Medium |
+| 1382 | [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/) | Medium |
+
+---
+**BINARY TREE**
+| # | Title | Difficulty |
+|:---:| ---------- |:--------:|
+|  | **BINARY TREE** | | |
+| 1351 | [Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/) | Easy | 
+| 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Medium |
+| 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | 
+| 153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium | 
+| 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium | 
+| 50 | [Pow(x, n)](https://leetcode.com/problems/powx-n) | Medium | 
+| 1201 | [Ugly Number III](https://leetcode.com/problems/ugly-number-iii/) | Medium |
+| 29 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | Medium |
+| 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | 
+
+---
+**MATH**
+| # | Title | Difficulty |
+|:---:| ---------- |:--------:|
+|  | **MATH** | | |
+| 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Easy | 
+| 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium |
+| 553 | [Optimal Division](https://leetcode.com/problems/optimal-division/) | Medium | 
+| 1362 | [Closest Divisors](https://leetcode.com/problems/closest-divisors/) | Medium | 
+| 1006 | [Clumsy Factorial](https://leetcode.com/problems/clumsy-factorial/) | Medium |
+| 592 | [Fraction Addition and  Subtraction](https://leetcode.com/problems/fraction-addition-and-subtraction/) | Medium | 
+| 640 | [Solve the Equation](https://leetcode.com/problems/solve-the-equation/) | Medium | 
+| 279 | [Perfect Squares](https://leetcode.com/problems/perfect-squares/) | Medium | 
+| 12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium | 
+| 866 | [Prime Palindrome](https://leetcode.com/problems/prime-palindrome/) | Medium | 
+| 223 | [Rectangle Area](https://leetcode.com/problems/rectangle-area/) |Medium  |
+| 1227 | [Airplane Seat Assignment Probability](https://leetcode.com/problems/airplane-seat-assignment-probability/) | Medium |
+| 1230 | [Toss Strange Coins](#1230) | Medium |
+| 1093 | [Statistics from a Large Sample](https://leetcode.com/problems/statistics-from-a-large-sample/) | Medium | 
+| 1017 | [Convert to Base -2](https://leetcode.com/problems/convert-to-base-2/) | Medium | 
 
 ---
 **HEAP**
