@@ -70,3 +70,17 @@
 | 543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy | 
 | 863 | [All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/) | Medium | 
 | 1245 | [Tree Diameter](#1245)| Medium | 
+
+
+---
+**HEAP**
+| # | Title | Difficulty |
+|---| ----- | -------- | 
+|  | **HEAP** | | 
+|378| [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | Medium |
+|659| [Split Array into Consecutive Subsequences](https://leetcode.com/problems/split-array-into-consecutive-subsequences/) | Medium |
+|692| [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | Medium |
+|973| [K Closest Points to Origin ](https://leetcode.com/problems/k-closest-points-to-origin/) | Medium |
+|1054| [Distant Barcodes](https://leetcode.com/problems/distant-barcodes/) | Medium |
+|218| [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | Hard |
+|857| [Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) | Hard |
