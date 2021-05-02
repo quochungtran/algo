@@ -1,3 +1,5 @@
+// O(n)
+
 class Solution
 {
 public:
@@ -20,7 +22,7 @@ public:
             {
                 start++;
             }
-            else
+            else 
             {
                 end--;
             }
