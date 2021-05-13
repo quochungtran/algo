@@ -9,45 +9,44 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    bool findTarget(TreeNode* root, int k) 
+    bool findTarget(TreeNode *root, int k)
     {
         vector<int> orderlist;
         inorder(root, orderlist);
         int start = 0;
-        int end   = orderlist.size() - 1;
-        
-        while(start < end)
+        int end = orderlist.size() - 1;
+
+        while (start < end)
         {
             int sum = orderlist[end] + orderlist[start];
             if (sum < k)
             {
-                start++; 
+                start++;
             }
             else if (sum > k)
             {
-                end--  ;
+                end--;
             }
             else
             {
-                return true;   
+                return true;
             }
         }
-        
+
         return false;
     }
-    
 
     // inorder traversal to convert a BST to a sorted array
-    void inorder(TreeNode* root, vector<int> & list)
+    void inorder(TreeNode *root, vector<int> &list)
     {
-        if(root)
+        if (root)
         {
             inorder(root->left, list);
             list.push_back(root->val);
-            inorder(root->right,list);
+            inorder(root->right, list);
         }
     }
-    
 };
