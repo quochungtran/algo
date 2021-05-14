@@ -11,43 +11,24 @@
  */
 class Solution {
 public:
-    
-    map<int,int> orderList;
-    int id = 0;
-  
     TreeNode* convertBST(TreeNode* root) 
     {
-        inorder(root, orderList); 
+        int sum = 0;
         
-        for (auto const& x : orderList)
-        {
-            std::cout << x.first  // string (key)
-              << ':' 
-              << x.second // string's value 
-              << std::endl;
-        }
+        inorder(root,sum);
         
+        return root;
         
-        return nullptr;
     }
     
-    int sum(int value,map<int,int>& map)
-    {
-        int S = 0;
-        for (int i = map[value] ; i < map.size() ; i++)
-        {
-            S += 
-        }
-    }
-    
-    void inorder(TreeNode * tree, map<int,int>& map)
+    void inorder(TreeNode * tree, int& sum)
     {
         if (tree)
         {
-            inorder(tree->left, map);
-            map.insert(pair<int,int>(tree->val, id));
-            id++;
-            inorder(tree->right,map);
+            inorder(tree->right, sum);
+            sum += tree->val;
+            tree->val = sum;
+            inorder(tree->left,sum);
         }
     }
 };
