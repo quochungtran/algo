@@ -1,3 +1,7 @@
+
+/*****Binary search*****/
+/******** O(n*log(m)) ********/
+
 class Solution
 {
 public:
@@ -13,7 +17,6 @@ public:
         // element in the row under consideration
         int nextEnd = m - 1;
 
-
         for (int i = 0; i < n; i++)
         {
             // If the last element of the current row
@@ -26,13 +29,12 @@ public:
             // negative Integer in the above row
             nextEnd = getLastNegativeIndex(grid[i], 0, nextEnd, n, m);
 
-            //return the number of negative elements  
+            //return the number of negative elements
             count += m - nextEnd;
         }
 
         return count;
     }
-
     // Recursive binary search to get last negative from right to left
     // value in a row between a start and an end
     int getLastNegativeIndex(vector<int> array, int start, int end, int n, int m)
