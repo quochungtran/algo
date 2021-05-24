@@ -44,34 +44,74 @@ int orderedLinearSearch(int A[], int n, int data)
 // Space complexity:O(1).
 
 // Iterative Binary Search Algo
-
-int BinarySearchIterative(int A[], int n, int data)
+// template 1
+int binarySearch(vector<int> &nums, int target)
 {
-    int low = 0;
-    int high = n - 1;
+    if (nums.size() == 0)
+        return -1;
 
-    while (low <= high)
+    int left = 0, right = nums.size() - 1;
+    while (left <= right)
     {
-        int mid = low + (high - low) / 2; // to avoid overflow
-        if (A[mid] == data)
+        // Prevent (left + right) overflow
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target)
         {
             return mid;
         }
-        else if (A[mid] < data)
+        else if (nums[mid] < target)
         {
-            low = mid + 1;
+            left = mid + 1;
         }
         else
         {
-            high = low - 1;
+            right = mid - 1;
         }
-
-        return -1;
     }
+
+    // End Condition: left > right
+    return -1;
 }
 
-// Recursive Binary Search Algo
+// template 2
+int binarySearch(vector<int> &nums, int target)
+{
+    if (nums.size() == 0)
+        return -1;
 
+    int left  = 0;
+    int right = nums.size();
+    while (left < right)
+    {
+        // Prevent (left + right) overflow
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target)
+        {
+            return mid;
+        }
+        else if (nums[mid] < target)
+        {
+            left = mid + 1;
+        }
+        else
+        {
+            right = mid;
+        }
+    }
+
+    // Post-processing:
+    // End Condition: left == right
+    if (left != nums.size() && nums[left] == target)
+        return left;
+
+    return -1;
+}
+
+// template 3
+
+
+
+// Recursive Binary Search Algo
 int BinarySearchRecusive(int A[], int low, int high, int data)
 {
     int mid = low + (high - low) / 2; // to avoid overflow
