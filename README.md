@@ -18,7 +18,7 @@
 |3| [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium |
 |11| [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium |
 |283| [Move Zeroes](https://leetcode.com/problems/move-zeroes/solution/) | Easy |
-
+|26| [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy |
 ---
 **LINKED LIST**
 | # | Title | Difficulty |
