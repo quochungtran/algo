@@ -104,6 +104,7 @@
 |:---:| ---------- |:--------:|
 |  | **MATH** | | |
 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Easy | 
+| 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | 
 | 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium |
 | 553 | [Optimal Division](https://leetcode.com/problems/optimal-division/) | Medium | 
 | 1362 | [Closest Divisors](https://leetcode.com/problems/closest-divisors/) | Medium | 
